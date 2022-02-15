@@ -1,4 +1,6 @@
-function count(product, isAdd) {
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// function section/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function count(product, price, isAdd) {
   const productInput = document.getElementById(product + "-input");
   const productInputText = parseInt(productInput.value);
   if (isAdd == true) {
@@ -6,17 +8,22 @@ function count(product, isAdd) {
   } else if (productInput.value > 1) {
     productInput.value = productInputText - 1;
   }
+  // update product price
+  const producntTotal = document.getElementById(product + "-total");
+  producntTotal.innerText = productInput.value * price;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// code section////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 document.getElementById("phone-plus").addEventListener("click", function () {
-  count("phone", true);
+  count("phone", 1219, true);
 });
 document.getElementById("phone-minus").addEventListener("click", function () {
-  count("phone", false);
+  count("phone", 1219, false);
 });
 document.getElementById("case-plus").addEventListener("click", function () {
-  count("case", true);
+  count("case", 59, true);
 });
 document.getElementById(" case-minus").addEventListener("click", function () {
-  count("case", false);
+  count("case", 59, false);
 });
