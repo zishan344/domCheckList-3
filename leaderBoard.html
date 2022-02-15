@@ -17,11 +17,11 @@
     <!-- header start -->
     <header></header>
     <!-- header end -->
-    <main>
+    <main style="margin-bottom: 20px">
       <!-- top-player & top-blogs -->
       <section class="container">
         <div class="top-players">
-          <h2 class="section-title">Top player</h2>
+          <h2 id="title-player" class="section-title">Top player</h2>
           <div class="players">
             <div class="player">
               <img src="./img/leader-bordImg/players/player-1.png" alt="" />
@@ -51,7 +51,7 @@
         </div>
         <hr />
         <div class="top-blogs">
-          <h2 class="section-title">Top Blog</h2>
+          <h2 id="title-blog" class="section-title">Top Blog</h2>
           <div class="blogs">
             <article class="blog">
               <div class="thumbnail">
@@ -172,6 +172,14 @@
           </div>
         </div>
       </section>
+      <ul id="list" style="text-align: center">
+        <li>Hello java Script</li>
+      </ul>
+      <button id="click" style="cursor: pointer">Click Me</button>
+
+      <input id="input-number" type="number" min="0" max="5" value="0" />
+      <button id="clicked">click The number</button>
     </main>
+    <script src="./js/leader-bord.js"></script>
   </body>
 </html>
