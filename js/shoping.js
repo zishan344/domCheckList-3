@@ -11,6 +11,28 @@ function count(product, price, isAdd) {
   // update product price
   const producntTotal = document.getElementById(product + "-total");
   producntTotal.innerText = productInput.value * price;
+
+  //   subtotal section//////////////////////////////
+  calculate();
+}
+
+// subtotal function
+function getInput(product) {
+  const productInput = document.getElementById(product + "-input");
+  const prodiuctinput = parseInt(productInput.value);
+  return prodiuctinput;
+}
+
+function calculate() {
+  const phoneTotal = getInput("phone") * 1219;
+  const caseTotal = getInput("case") * 59;
+  const totalCost = phoneTotal + caseTotal;
+  const tax = totalCost / 10;
+  const total = totalCost + tax;
+
+  document.getElementById("sub-total").innerText = totalCost;
+  document.getElementById("tax").innerText = tax;
+  document.getElementById("total").innerText = total;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// code section////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
